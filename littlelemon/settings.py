@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'restaurant',  # it is mandatory to add the app to the installed apps list defined in the project setting.pymodule. This allows the Django ORM to translate the model definitions into the corresponding tables.
     'rest_framework',
     'rest_framework.authtoken',
+    'djoser',
 ]
 
 MIDDLEWARE = [
