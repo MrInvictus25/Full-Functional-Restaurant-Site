@@ -12,7 +12,7 @@ urlpatterns = [
     path('menu_item/<int:pk>/', views.display_menu_item, name="menu_item"),  
     path('bookings', views.bookings, name='bookings'), 
     path('api/reservations', bookingview.as_view()), 
-    path('api/menu-items', views.menuview.as_view()),
+    path('api/menu-items', menuview.as_view()),
     path('api/items', views.Menuview.as_view()),
     path('api/items/<int:pk>', views.SingleMenuview.as_view()),
     path('api/access/', views.access),

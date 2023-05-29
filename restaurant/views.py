@@ -79,7 +79,7 @@ def bookings(request):
     return HttpResponse(booking_json, content_type ='application/json')
 
 class bookingview(APIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
     def get(self, request):
         items = Booking.objects.all()
         serializer = BookingSerializer(items, many=True)
@@ -107,7 +107,7 @@ class menuview(APIView):
     #         return Response({"Status": "Success", "Data": serializer.data})
     
 class Menuview(generics.ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
