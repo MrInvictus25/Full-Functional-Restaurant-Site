@@ -107,7 +107,7 @@ class menuview(APIView):
     #         return Response({"Status": "Success", "Data": serializer.data})
     
 class Menuview(generics.ListCreateAPIView):
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
